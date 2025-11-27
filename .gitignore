@@ -1,0 +1,67 @@
+# Node/Capacitor
+node_modules/
+app/node_modules/
+
+# Build Capacitor
+app/android/
+android/
+
+# Plugins gerados automaticamente
+app/capacitor-cordova-android-plugins/
+app/plugins/
+capacitor-cordova-android-plugins/
+capacitor/
+
+# Arquivos de build
+app/build/
+build/
+*/build/
+
+# Gradle work dirs
+.gradle/
+app/.gradle/
+android/.gradle/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Saídas de compilação
+app/build/
+android/build/
+*/build/
+
+# Arquivos temporários do Gradle
+**/gradle-app.setting
+**/settings.gradle
+**/*.gradle*
+!build.gradle
+!settings.gradle
+
+# Logs
+*.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# Arduino/ESP32
+arduino/libraries/
+arduino/wokwi-project.json
+arduino/wokwi-project/
+arduino/*.bak
+arduino/*.tmp
+
+# Arquivos temporários gerais
+*.tmp
+*.temp
+*.swp
+*.swo
+*.lock
+*.cache
