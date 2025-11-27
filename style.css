@@ -1,0 +1,239 @@
+/* === Reset básico === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fb;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+/* === Estrutura geral === */
+.container {
+  width: 100%;
+  max-width: 360px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: aparecer 0.6s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Logo === */
+.logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 24px auto;
+}
+
+/* === Ícone === */
+.icone {
+  width: 120px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+/* === Inputs === */
+ion-input {
+  --background: #f3f4f6;
+  --border-radius: 10px;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --placeholder-color: #a0a0a0;
+  --color: #333;
+  --highlight-color-focused: #4caf50;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+}
+
+/* === Botões === */
+ion-button {
+  --background: #4caf50;
+  --border-radius: 10px;
+  --color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+ion-content.tela::part(scroll) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ion-button[fill="clear"] {
+  --background: transparent;
+  --box-shadow: none;
+  --color: #4caf50;
+  font-size: 0.9em;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding: 0;
+  font-weight: 500;
+}
+
+/* === Links e textos === */
+.texto-link {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.link {
+  color: #ff9800;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* === Mensagens === */
+#mensagemLogin,
+#mensagemCadastro {
+  margin-top: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* === Títulos === */
+.titulo {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.subtitulo {
+  font-size: 0.95em;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+/* === Botões sociais === */
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+}
+
+/* === Esconder telas === */
+.escondido {
+  display: none;
+}
+
+/* === Responsivo === */
+@media (max-width: 400px) {
+  .container {
+    padding: 24px 18px;
+  }
+}
+
+/* === Tela principal === */
+
+.dashboard {
+  max-width: 360px;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: left;
+  color: #222;
+}
+
+/* === Cards === */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.card-header ion-icon {
+  font-size: 1.4em;
+  color: #4caf50;
+}
+
+.card-header h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* === Temperatura === */
+.temp-value {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #4caf50;
+  margin: 12px 0 18px;
+}
+
+/* === Status MQTT === */
+.status {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.status-text {
+  font-weight: 600;
+}
+
+/* === Botão Sair === */
+.btn-exit {
+  --background: #555;
+  --color: #fff;
+  margin-top: 10px;
+  border-radius: 12px;
+}

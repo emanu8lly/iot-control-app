@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login App</title>
+    <script type="module" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <ion-app>
+      <!-- Tela de Login -->
+      <ion-content class="ion-padding tela" id="telaLogin">
+        <div class="container">
+          <ion-img src="img/secure-login.png" alt="Login Seguro" class="logo"></ion-img>
+          <ion-input id="emailLogin" placeholder="Informe o seu e-mail" type="email"></ion-input>
+          <ion-input id="senhaLogin" placeholder="Informe a sua senha" type="password"></ion-input>
+          <ion-button expand="block" id="botaoEntrar">ENTRAR</ion-button>
+          <ion-button fill="clear" id="botaoRecuperar">Esqueci minha senha</ion-button>
+          <p class="texto-link">
+            Não tem uma conta? <span id="irParaCadastro" class="link">Inscreva-se</span>
+          </p>
+          <div class="social-login">
+            <div class="social-btn">
+              <ion-img src="img/google.png" alt="Entre com o Google"></ion-img>
+            </div>
+          </div>
+          <div id="mensagemLogin"></div>
+        </div>
+      </ion-content>
+
+      <!-- Tela de Cadastro -->
+      <ion-content class="ion-padding tela escondido" id="telaCadastro">
+        <div class="container">
+          <ion-img src="img/aguardando-cadastro.png" alt="Cadastro Acolhedor" class="icone"></ion-img>
+          <h2 class="titulo">Crie sua conta</h2>
+          <p class="subtitulo">É rapidinho e você pode completar depois...</p>
+          <ion-input id="nome" placeholder="Nome (opcional)"></ion-input>
+          <ion-input id="emailCadastro" placeholder="Email" type="email"></ion-input>
+          <ion-input id="senhaCadastro" placeholder="Senha" type="password"></ion-input>
+          <ion-button expand="block" id="botaoCadastrar">CADASTRAR</ion-button>
+          <ion-button fill="clear" id="voltarParaLogin">Voltar ao login</ion-button>
+          <div id="mensagemCadastro"></div>
+        </div>
+      </ion-content>
+
+      <!-- Tela Principal -->
+      <ion-content class="ion-padding tela escondido" id="telaPrincipal">
+        <div class="dashboard">
+          <h2 class="title">Bem-vindo(a), <span id="nomeUsuario"></span>!</h2>
+          <div class="card">
+          <div class="card-header">
+          <ion-icon name="bulb-outline"></ion-icon><h3>Controle do LED</h3></div>
+          <ion-button expand="block" id="ligarLED" color="success"> Ligar LED</ion-button>
+          <ion-button expand="block" id="desligarLED" color="danger"> Desligar LED</ion-button></div>
+          <div class="card">
+          <div class="card-header">
+          <ion-icon name="thermometer-outline"></ion-icon><h3>Temperatura</h3></div>
+          <div class="temp-value">
+          <span id="temperaturaValor">--</span>°C </div>
+          <ion-button expand="block" id="atualizarTemp" color="primary"> Atualizar Temperatura</ion-button></div>
+          <div class="status">
+          <span id="statusMQTT" class="status-text">🔴 Desconectado</span></div>
+          <ion-button expand="block" id="botaoSair" color="dark" class="btn-exit"> Sair </ion-button>
+      </div>
+    </ion-content>
+  </ion-app>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="mqtt.js"></script>
+    <script type="module" src="script.js"></script>
+  
+  </body>
+</html>
