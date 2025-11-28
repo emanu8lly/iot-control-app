@@ -25,7 +25,8 @@ O app permite:
 - CSS  
 - JavaScript  
 - Capacitor  
-- Android WebView  
+- Android WebView
+- Firebase Authentication  
 
 ### **MQTT**
 - HiveMQ (broker público)  
@@ -51,6 +52,12 @@ O app permite:
   - 🟢 Conectado  
   - 🟠 Reconectando…  
   - 🔴 Desconectado / Desconectando  
+
+---
+
+## 🔐 Autenticação
+O aplicativo utiliza **Firebase Authentication** para realizar login real do usuário.  
+As credenciais são verificadas diretamente nos servidores do Firebase, garantindo segurança e autenticidade.
 
 ---
 
